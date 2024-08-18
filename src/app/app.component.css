@@ -1,0 +1,9 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+
+.table-conatiner{
+    margin-top: 5px;
+    margin-left: 20px;
+    margin-right: 20px;
+  }
