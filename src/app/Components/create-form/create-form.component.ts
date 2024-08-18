@@ -4,10 +4,11 @@ import { MatInputModule } from '@angular/material/input';
 import {MatFormFieldControl, MatFormFieldModule} from '@angular/material/form-field';
 import {MatCardModule} from '@angular/material/card';
 import {MatButtonModule} from '@angular/material/button';
-import { RouterLink } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { FormBuilder, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { ApiService } from '../../api.service';
 import { Router } from '@angular/router';
+import { ToastrService } from 'ngx-toastr';
 @Component({
   selector: 'app-create-form',
   standalone: true,
@@ -19,12 +20,30 @@ export class CreateFormComponent {
 apiService=inject(ApiService);
 formBuilder=inject(FormBuilder);
 router=inject(Router);
+route=inject(ActivatedRoute);
+toaster=inject(ToastrService);
 userForm=this.formBuilder.group({
+  userId:['',[]],
   firstName:['',Validators.required],
   lastName:['',Validators.required],
   email:['',Validators.required],
   city:['',Validators.required]
 });
+  userId!: string;
+  isEdit=false;
+
+ngOnInit(){
+this.userId=this.route.snapshot.params["userId"];
+if(this.userId){
+  this.isEdit=true;
+}
+this.apiService.getUserByuserId(this.userId).subscribe((res:any)=>{
+ if(res.success && res.data!=null){
+  this.userForm.patchValue(res.data);
+  this.userForm.controls.email.disable();
+ }
+});
+}
 
 save(){
   if(this.userForm.value){
@@ -37,7 +56,29 @@ save(){
     this.apiService.createUser(user).subscribe((res:any)=>{
       if(res.success){
          console.log(res);
+         this.toaster.success("User Created Successfully");
          this.router.navigateByUrl("/users");
+      }
+    })
+  }
+}
+
+update(){
+  if(this.userForm.value){
+    const user:IUser={
+      userId:this.userForm.value.userId!,
+      firstName:this.userForm.value.firstName!,
+      lastName:this.userForm.value.lastName!,
+      email:this.userForm.value.email!,
+      city:this.userForm.value.city!
+    }
+    this.apiService.updateUser(user).subscribe((res:any)=>{
+      if(res.success){
+        this.toaster.success("User Updated Successfully");
+         console.log(res);
+         this.router.navigateByUrl("/users");
+      }else{
+        this.toaster.error("Something Went Wrong!");
       }
     })
   }

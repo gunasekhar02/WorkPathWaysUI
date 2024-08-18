@@ -14,5 +14,9 @@ export const routes: Routes = [
     {
         path:"create-user",
         component:CreateFormComponent
+    },
+    {
+        path:"user/:userId",
+        component:CreateFormComponent
     }
 ];
