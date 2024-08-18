@@ -10,11 +10,27 @@ export class ApiService {
   baseUrl:string ="https://localhost:7148/";
   constructor() { 
   }
-  getAllUsers(){
-    return this.http.get<IUser[]>(this.baseUrl + "User/GetAllUsers");
-  }
 
   createUser(user:IUserDto){
     return this.http.post<IUserDto>(this.baseUrl+"User/AddUser",user)
   }
+  
+
+  getUserByuserId(userId:string){
+    const url = `${this.baseUrl}User/getUserByUserId/${userId}`;
+    return this.http.get<string>(url);
+  }
+  getAllUsers(){
+    return this.http.get<IUser[]>(this.baseUrl + "User/GetAllUsers");
+  }
+
+  updateUser(user:IUser){
+    return this.http.put<string>(this.baseUrl+"User/EditUser",user)
+  }
+
+  deleteUser(userId:string){
+    const url = `${this.baseUrl}User/DeleteUserByUserId/${userId}`;
+    return this.http.delete<string>(url);
+  }
+
 }

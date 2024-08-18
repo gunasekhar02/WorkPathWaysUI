@@ -1,60 +1,66 @@
 @if(userList && userList.length>0){
-    <div class="btn-container">
-        <div>
-            <button routerLink="/create-user"  mat-raised-button color="primary">Add User</button>
-        </div>
+<div class="btn-container">
+    <div>
+        <button routerLink="/create-user" mat-raised-button color="primary">Add User</button>
     </div>
-    
-    <div class="mat-elevation-z8">
-        <table mat-table [dataSource]="userList" >
-    
-            <!--- Note that these columns can be defined in any order.
+</div>
+
+<div class="mat-elevation-z8">
+    <table mat-table [dataSource]="userList">
+
+        <!--- Note that these columns can be defined in any order.
                   The actual rendered columns are set as a property on the row definition" -->
-          
-            <!-- User Id Column -->
-            <ng-container matColumnDef="userId">
-              <th mat-header-cell *matHeaderCellDef> User ID </th>
-              <td mat-cell *matCellDef="let element"> {{element.userId}} </td>
-            </ng-container>
-          
-            <!-- First Name Column -->
-            <ng-container matColumnDef="firstName">
-              <th mat-header-cell *matHeaderCellDef>First Name </th>
-              <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
-            </ng-container>
-          
-              <!-- Lsst Name Column -->
-              <ng-container matColumnDef="lastName">
-                <th mat-header-cell *matHeaderCellDef>Last Name </th>
-                <td mat-cell *matCellDef="let element"> {{element.lastName}} </td>
-              </ng-container>
+
+        <!-- User Id Column -->
+        <ng-container matColumnDef="userId">
+            <th mat-header-cell *matHeaderCellDef> User ID </th>
+            <td mat-cell *matCellDef="let element"> {{element.userId}} </td>
+        </ng-container>
+
+        <!-- First Name Column -->
+        <ng-container matColumnDef="firstName">
+            <th mat-header-cell *matHeaderCellDef>First Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.firstName}} </td>
+        </ng-container>
+
+        <!-- Lsst Name Column -->
+        <ng-container matColumnDef="lastName">
+            <th mat-header-cell *matHeaderCellDef>Last Name </th>
+            <td mat-cell *matCellDef="let element"> {{element.lastName}} </td>
+        </ng-container>
+
+        <!-- Email Column -->
+        <ng-container matColumnDef="email">
+            <th mat-header-cell *matHeaderCellDef> Email </th>
+            <td mat-cell *matCellDef="let element"> {{element.email}} </td>
+        </ng-container>
+
+        <!-- City Column -->
+        <ng-container matColumnDef="city">
+            <th mat-header-cell *matHeaderCellDef> City </th>
+            <td mat-cell *matCellDef="let element"> {{element.city}} </td>
+        </ng-container>
+
+        <!-- Action Columns -->
+        <ng-container matColumnDef="actions-edit">
+            <th mat-header-cell *matHeaderCellDef> Actions(Edit) </th>
+            <td mat-cell *matCellDef="let element"> <button  mat-mini-fab (click)="onEdit(element.userId)">
+                    <mat-icon>edit</mat-icon>
+                </button>
+            </td>
+        </ng-container>
         
-            <!-- Email Column -->
-            <ng-container matColumnDef="email">
-              <th mat-header-cell *matHeaderCellDef> Email </th>
-              <td mat-cell *matCellDef="let element"> {{element.email}} </td>
-            </ng-container>
-          
-            <!-- City Column -->
-            <ng-container matColumnDef="city">
-              <th mat-header-cell *matHeaderCellDef> City </th>
-              <td mat-cell *matCellDef="let element"> {{element.city}} </td>
-            </ng-container>
-        
-            <!-- Action Column -->
-            <!-- <ng-container matColumnDef="action">
-                <th mat-header-cell *matHeaderCellDef> Action </th>
-                <td mat-cell *matCellDef="let element"> {{element.city}} </td>
-              </ng-container> -->
-          
-            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-          </table>
-    </div>
+        <ng-container matColumnDef="actions-delete">
+            <th mat-header-cell *matHeaderCellDef> Actions(Delete) </th>
+            <td mat-cell *matCellDef="let element">
+                <button mat-mini-fab color="warn" (click)="onDelete(element.userId)">
+                    <mat-icon>delete</mat-icon>
+                </button>
+            </td>
+        </ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+    </table>
+</div>
 }
-
-
-
-
-  
-  
