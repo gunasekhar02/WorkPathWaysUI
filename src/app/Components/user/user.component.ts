@@ -32,11 +32,14 @@ loadUsers(){
   })
 }
 
+
 onDelete(userId:string){
   this.apiService.deleteUser(userId).subscribe((res: any)=>{
     if(res.success==true && res.errorMessage==null){
       console.log(res);
-      this.toaster.success("User deleted Successfully");
+      this.toaster.success('User Deleted Successfully.', 'Success', {
+        toastClass: 'toast toast-success'
+      });
       this.loadUsers();
     }
     console.log(res);
