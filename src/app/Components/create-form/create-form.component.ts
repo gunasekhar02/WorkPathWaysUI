@@ -40,7 +40,6 @@ if(this.userId){
 this.apiService.getUserByuserId(this.userId).subscribe((res:any)=>{
  if(res.success && res.data!=null){
   this.userForm.patchValue(res.data);
-  this.userForm.controls.email.disable();
  }
 });
 }
@@ -56,7 +55,9 @@ save(){
     this.apiService.createUser(user).subscribe((res:any)=>{
       if(res.success){
          console.log(res);
-         this.toaster.success("User Created Successfully");
+         this.toaster.success('User Created Successfully.', 'Success', {
+          toastClass: 'toast toast-success'
+        });
          this.router.navigateByUrl("/users");
       }
     })
@@ -74,11 +75,15 @@ update(){
     }
     this.apiService.updateUser(user).subscribe((res:any)=>{
       if(res.success){
-        this.toaster.success("User Updated Successfully");
+        this.toaster.success('User Updated Successfully.', 'Success', {
+          toastClass: 'toast toast-success'
+        });
          console.log(res);
          this.router.navigateByUrl("/users");
       }else{
-        this.toaster.error("Something Went Wrong!");
+        this.toaster.error('Something Went Wrong', 'Error', {
+          toastClass: 'toast toast-error'
+        });
       }
     })
   }

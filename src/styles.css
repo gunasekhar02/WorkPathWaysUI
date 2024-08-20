@@ -1,8 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'ngx-toastr/toastr';
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import 'ngx-toastr/toastr';
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+/* styles.css or styles.scss */
+.toast-success {
+    background-color: #28a745; /* Green background for success */
+    color: white; /* White text */
+  }
+  
+  .toast-error {
+    background-color: #dc3545; /* Red background for error */
+    color: white; /* White text */
+  }
