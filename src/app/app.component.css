@@ -1,3 +1,4 @@
+
 .example-spacer {
     flex: 1 1 auto;
   }
@@ -7,3 +8,30 @@
     margin-left: 20px;
     margin-right: 20px;
   }
+.mat-toolbar{
+  border-radius: 8px;
+}
+
+.page-footer {
+  background-color: 2a2a2a; /* Darker color for contrast */
+  color: white;
+  padding: 0px; /* Adjust padding as needed */
+  text-align: center;
+  border-radius: 0 0 10px 10px; /* Rounded corners on the bottom */
+  margin-top: 10%;
+}
+
+.logo {
+  height: 40px;
+  width: 40px;
+  margin-right: 5px;
+  display: block;
+  transition: transform 0.3s, opacity 0.3s; /* Smooth transition for transform and opacity */
+  cursor: pointer; 
+}
+
+.logo:hover {
+  transform: scale(1.1); /* Scale up the logo slightly */
+  opacity: 0.8; /* Slightly reduce opacity for a fade effect */
+}
+

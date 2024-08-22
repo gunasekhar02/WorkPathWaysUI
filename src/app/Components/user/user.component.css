@@ -4,3 +4,16 @@
     padding-top: 1%;
     padding-bottom: 2%;
 }
+
+
+.table-container {
+    border-radius: 8px; /* Apply border-radius to the container */
+    overflow: hidden; /* Ensure that content inside respects the border-radius */
+    background-color: white; /* Optional: Background color for contrast */
+    
+  }
+  
+  table {
+    width: 100%; /* Ensure the table takes full width of the container */
+    border-collapse: separate; /* Ensure border-radius is applied correctly */
+  }

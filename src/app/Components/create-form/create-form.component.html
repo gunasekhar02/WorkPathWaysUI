@@ -1,103 +1,104 @@
-
-@if(isEdit){
-    <div class="card-class">
-        <mat-card appearance="raised">
-            <mat-card-content>
-                <div>
-                    <mat-card style="padding-left: 40%;" appearance="raised">
-                        <mat-card-content>Edit User Form</mat-card-content>
-                      </mat-card>
-                    <div class="form-class" style="padding-top: 5%;">
-                        <form [formGroup]="userForm" (ngSubmit)="update()">
-    
-                            <div class="w-full flex flex-wrap">
-                                <mat-form-field class="w-full">
-                                    <mat-label>Enter First Name </mat-label>
-                                    <input matInput placeholder="Enter first Name" required formControlName="firstName"/>
-                                </mat-form-field>
-                            </div>
-    
-                            <div class="w-full flex flex-wrap">
-                                <mat-form-field class="w-full">
-                                    <mat-label>Enter Last Name </mat-label>
-                                    <input matInput placeholder="Enter Last Name" required formControlName="lastName"/>
-                                </mat-form-field>
-                            </div>
-    
-                            <div class="w-full flex flex-wrap">
-                                <mat-form-field class="w-full">
-                                    <mat-label>Enter Email </mat-label>
-                                    <input  matInput placeholder="xyz@gmail.com" required formControlName="email"/>
-                                </mat-form-field>
-                            </div>
-    
-                            <div class="w-full flex flex-wrap">
-                                <mat-form-field class="w-full">
-                                    <mat-label>Enter City </mat-label>
-                                    <input matInput placeholder="Enter City" required formControlName="city"/>
-                                </mat-form-field>
-                            </div>
-                            <div class="btn-container" style="display: flex; justify-content: space-between; align-items: center;">
-                                <button mat-raised-button color="primary" color="primary" routerLink="/users">Back</button>
-                                <button mat-raised-button color="primary" [disabled]="!userForm.valid" style="margin: 0 auto;">Update</button>
-                            </div>
-                        </form>
+<div class="class-main" >
+    @if(isEdit){
+        <div class="card-class">
+            <mat-card appearance="raised">
+                <mat-card-content>
+                    <div>
+                        <mat-card style="padding-left: 40%;" appearance="raised">
+                            <mat-card-content  style="color: black; font-weight: bold;" >Edit User Form</mat-card-content>
+                          </mat-card>
+                        <div class="form-class" style="padding-top: 5%;">
+                            <form [formGroup]="userForm" (ngSubmit)="update()">
+        
+                                <div class="w-full flex flex-wrap">
+                                    <mat-form-field class="w-full">
+                                        <mat-label>Enter First Name </mat-label>
+                                        <input matInput placeholder="Enter first Name" required formControlName="firstName"/>
+                                    </mat-form-field>
+                                </div>
+        
+                                <div class="w-full flex flex-wrap">
+                                    <mat-form-field class="w-full">
+                                        <mat-label>Enter Last Name </mat-label>
+                                        <input matInput placeholder="Enter Last Name" required formControlName="lastName"/>
+                                    </mat-form-field>
+                                </div>
+        
+                                <div class="w-full flex flex-wrap">
+                                    <mat-form-field class="w-full">
+                                        <mat-label>Enter Email </mat-label>
+                                        <input  matInput placeholder="xyz@gmail.com" required formControlName="email"/>
+                                    </mat-form-field>
+                                </div>
+        
+                                <div class="w-full flex flex-wrap">
+                                    <mat-form-field class="w-full">
+                                        <mat-label>Enter City </mat-label>
+                                        <input matInput placeholder="Enter City" required formControlName="city"/>
+                                    </mat-form-field>
+                                </div>
+                                <div class="btn-container" style="display: flex; justify-content: space-between; align-items: center;">
+                                    <button mat-raised-button color="primary" color="primary" routerLink="/users">Back</button>
+                                    <button mat-raised-button color="primary" [disabled]="!userForm.valid" style="margin: 0 auto;">Update</button>
+                                </div>
+                            </form>
+                        </div>
+        
                     </div>
-    
-                </div>
-            </mat-card-content>
-        </mat-card>
-    </div>
-    
-}
-@else {
-    <div class="card-class">
-        <mat-card appearance="raised">
-            <mat-card-content>
-                <div>
-                    <mat-card style="padding-left: 40%;" appearance="raised">
-                        <mat-card-content>Create User Form</mat-card-content>
-                      </mat-card>
-                    <div class="form-class" style="padding-top: 5%;">
-                        <form [formGroup]="userForm" (ngSubmit)="save()">
-    
-                            <div class="w-full flex flex-wrap">
-                                <mat-form-field class="w-full">
-                                    <mat-label>Enter First Name </mat-label>
-                                    <input matInput placeholder="Enter first Name" required formControlName="firstName"/>
-                                </mat-form-field>
-                            </div>
-    
-                            <div class="w-full flex flex-wrap">
-                                <mat-form-field class="w-full">
-                                    <mat-label>Enter Last Name </mat-label>
-                                    <input matInput placeholder="Enter Last Name" required formControlName="lastName"/>
-                                </mat-form-field>
-                            </div>
-    
-                            <div class="w-full flex flex-wrap">
-                                <mat-form-field class="w-full">
-                                    <mat-label>Enter Email </mat-label>
-                                    <input matInput placeholder="xyz@gmail.com" required formControlName="email"/>
-                                </mat-form-field>
-                            </div>
-    
-                            <div class="w-full flex flex-wrap">
-                                <mat-form-field class="w-full">
-                                    <mat-label>Enter City </mat-label>
-                                    <input matInput placeholder="Enter City" required formControlName="city"/>
-                                </mat-form-field>
-                            </div>
-                            <div class="btn-container" style="display: flex; justify-content: space-between; align-items: center;">
-                                <button mat-raised-button color="primary" color="primary" routerLink="/users">Back</button>
-                                <button mat-raised-button color="primary" [disabled]="!userForm.valid" style="margin: 0 auto;">Save</button>
-                            </div>
-                        </form>
+                </mat-card-content>
+            </mat-card>
+        </div>
+        
+    }
+    @else {
+        <div class="card-class">
+            <mat-card appearance="raised">
+                <mat-card-content>
+                    <div>
+                        <mat-card style="padding-left: 40%;" appearance="raised">
+                            <mat-card-content style="color: black; font-weight: bold;" >Create User Form</mat-card-content>
+                          </mat-card>
+                        <div class="form-class" style="padding-top: 5%;">
+                            <form [formGroup]="userForm" (ngSubmit)="save()">
+        
+                                <div class="w-full flex flex-wrap">
+                                    <mat-form-field class="w-full">
+                                        <mat-label>Enter First Name </mat-label>
+                                        <input matInput placeholder="Enter first Name" required formControlName="firstName"/>
+                                    </mat-form-field>
+                                </div>
+        
+                                <div class="w-full flex flex-wrap">
+                                    <mat-form-field class="w-full">
+                                        <mat-label>Enter Last Name </mat-label>
+                                        <input matInput placeholder="Enter Last Name" required formControlName="lastName"/>
+                                    </mat-form-field>
+                                </div>
+        
+                                <div class="w-full flex flex-wrap">
+                                    <mat-form-field class="w-full">
+                                        <mat-label>Enter Email </mat-label>
+                                        <input matInput placeholder="xyz@gmail.com" required formControlName="email"/>
+                                    </mat-form-field>
+                                </div>
+        
+                                <div class="w-full flex flex-wrap">
+                                    <mat-form-field class="w-full">
+                                        <mat-label>Enter City </mat-label>
+                                        <input matInput placeholder="Enter City" required formControlName="city"/>
+                                    </mat-form-field>
+                                </div>
+                                <div class="btn-container" style="display: flex; justify-content: space-between; align-items: center;">
+                                    <button mat-raised-button color="primary" color="primary" routerLink="/users">Back</button>
+                                    <button mat-raised-button color="primary" [disabled]="!userForm.valid" style="margin: 0 auto;">Save</button>
+                                </div>
+                            </form>
+                        </div>
+        
                     </div>
-    
-                </div>
-            </mat-card-content>
-        </mat-card>
-    </div>
-    
-}
+                </mat-card-content>
+            </mat-card>
+        </div>
+        
+    }
+</div>
