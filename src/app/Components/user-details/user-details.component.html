@@ -1,0 +1,39 @@
+
+<h3>Experience</h3>
+
+<mat-list class="example-list-wrapping">
+    <mat-list-item class="list-item" lines="3" *ngFor="let item of listUserExperiance">
+      <span matListItemTitle>{{ item.role }}</span>
+      <span matListItemTitle>{{ item.companyName }}</span>
+      <span matListItemTitle>Professional Experience: {{ item.professionalExperience }}</span>
+      <span>{{ item.description }}</span>
+    </mat-list-item>
+  </mat-list>
+
+
+  
+<h3>Desired Companies</h3>
+
+<mat-list class="example-list-wrapping">
+    <mat-list-item class="list-item" lines="3" *ngFor="let item of listUserDesiredCompanies">
+      <span matListItemTitle>Desired Role:  {{ item.desiredRole }}</span>
+      <span matListItemTitle>Desired Company:  {{ item.desiredCompanyName }}</span>
+      <span>{{ item.description }}</span>
+    </mat-list-item>
+  </mat-list>
+
+  <h3>Accomplishments</h3>
+
+<mat-list class="example-list-wrapping">
+    <mat-list-item class="list-item" lines="3" *ngFor="let item of listUserAccomplishments">
+      <span matListItemTitle>Awards:  {{ item.awards }}</span>
+      <span matListItemTitle>In the Company:  {{ item.inCompany }}</span>
+      <span matListItemTitle>Awarded for:  {{ item.awardedFor }}</span>
+
+      <span>{{ item.description }}</span>
+    </mat-list-item>
+  </mat-list>
+
+
+
+  
