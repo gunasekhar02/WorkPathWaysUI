@@ -37,8 +37,9 @@
                                     <input matInput placeholder="Enter City" required formControlName="city"/>
                                 </mat-form-field>
                             </div>
-                            <div class="btn-container">
-                                <button mat-raised-button  color="primary" [disabled]="!userForm.valid">Update</button>
+                            <div class="btn-container" style="display: flex; justify-content: space-between; align-items: center;">
+                                <button mat-raised-button color="primary" color="primary" routerLink="/users">Back</button>
+                                <button mat-raised-button color="primary" [disabled]="!userForm.valid" style="margin: 0 auto;">Update</button>
                             </div>
                         </form>
                     </div>
@@ -87,8 +88,9 @@
                                     <input matInput placeholder="Enter City" required formControlName="city"/>
                                 </mat-form-field>
                             </div>
-                            <div class="btn-container">
-                                <button mat-raised-button  color="primary" [disabled]="!userForm.valid">Save</button>
+                            <div class="btn-container" style="display: flex; justify-content: space-between; align-items: center;">
+                                <button mat-raised-button color="primary" color="primary" routerLink="/users">Back</button>
+                                <button mat-raised-button color="primary" [disabled]="!userForm.valid" style="margin: 0 auto;">Save</button>
                             </div>
                         </form>
                     </div>
