@@ -20,7 +20,7 @@ userList:IUser[]=[];
 router=inject(Router);
 apiService=inject(ApiService);
 toaster=inject(ToastrService);
-displayedColumns: string[] = ['userId', 'firstName', 'lastName', 'email','city','actions-edit','actions-delete'];
+displayedColumns: string[] = ['user', 'userDetails', 'firstName', 'lastName', 'email','city','actions-edit','actions-delete'];
 ngOnInit(){
    this.loadUsers();
 }
