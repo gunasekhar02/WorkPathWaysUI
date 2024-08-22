@@ -7,10 +7,11 @@ import {MatButtonModule} from '@angular/material/button';
 import { RouterLink } from '@angular/router';
 import { Router } from '@angular/router';
 import { ToastrService } from 'ngx-toastr';
+import {MatTooltipModule} from '@angular/material/tooltip';
 @Component({
   selector: 'app-user',
   standalone: true,
-  imports: [MatTableModule,MatIconModule,MatButtonModule,RouterLink],
+  imports: [MatTableModule,MatIconModule,MatButtonModule,RouterLink,MatTooltipModule],
   templateUrl: './user.component.html',
   styleUrl: './user.component.css'
 })
