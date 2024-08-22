@@ -1,3 +1,17 @@
+
+
 .example-list-wrapping {
     max-width: 500px;
+  }
+
+  .list-data {
+    margin: 80px;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    color: black; /* Ensure text is visible on a black background */
+  }
+  
+  .list-item{
+    color: white;
   }
