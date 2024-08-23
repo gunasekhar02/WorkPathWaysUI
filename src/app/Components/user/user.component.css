@@ -10,10 +10,29 @@
     border-radius: 8px; /* Apply border-radius to the container */
     overflow: hidden; /* Ensure that content inside respects the border-radius */
     background-color: white; /* Optional: Background color for contrast */
-    
+    max-height: 350px; /* Set a max-height to enable scrolling */
+    overflow-y: auto; 
   }
   
   table {
     width: 100%; /* Ensure the table takes full width of the container */
     border-collapse: separate; /* Ensure border-radius is applied correctly */
+    background-color: #242124;
+    height: 300px;
   }
+
+  table th {
+    position: -webkit-sticky; /* For Safari */
+    position: sticky;
+    top: 0; /* Stick to the top of the table container */
+    background-color: #333; /* Darker background for header */
+    z-index: 1; /* Ensure headers are above other content */
+    color: white; /* Ensure text is readable */
+}
+
+  .header{
+    color: white;
+  }
+.row{
+  color: white;
+}

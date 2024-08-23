@@ -1,34 +1,41 @@
-
 <div class="class-main">
-  <div >
-      <mat-toolbar >
-      <!-- <button routerLink="/"  mat-icon-button color="primary" style="margin-right: 5px;"  routerLinkActive="router-link-active" >
-        <mat-icon mar>home</mat-icon>
-      </button> -->
-      <img class="logo" src="https://cdn2.iconfinder.com/data/icons/essential-circles-1/24/_w-512.png" routerLink="/"  mat-icon-button color="primary" style="margin-right: 5px;"  routerLinkActive="router-link-active" />
-      <span >WorkPathWays.in</span>
+  <div>
+    <mat-toolbar>
+
+      <img class="logo" src="https://cdn2.iconfinder.com/data/icons/essential-circles-1/24/_w-512.png" routerLink="/"
+        style="margin-right: 5px;" routerLinkActive="router-link-active" />
+      <span style="color: white; margin-left: 10px;">WorkPathWays.in</span>
 
       <span class="example-spacer"></span>
-      <button matTooltip="Mail us"
-      matTooltipClass="example-tooltip-uppercase">
-        <a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWsLTHWKgnxNgTTcDkDbcHlfNskTpgqZFNMRvkskhtQXgzrqdctczmTTbLtMCGJhQzNjLqDDb" target="_blank" mat-icon-button>
-        <mat-icon style="color: black;">mail</mat-icon></a>
+      <button matTooltip="Mail us" matTooltipClass="example-tooltip-uppercase">
+        <a href="https://mail.google.com/mail/u/0/#inbox?compose=DmwnWsLTHWKgnxNgTTcDkDbcHlfNskTpgqZFNMRvkskhtQXgzrqdctczmTTbLtMCGJhQzNjLqDDb"
+          target="_blank" mat-icon-button>
+          <mat-icon style="color:white;">mail</mat-icon></a>
       </button>
+      <a matTooltip="Connect through LinkedIn" matTooltipClass="example-tooltip-uppercase" href="https://www.linkedin.com/in/guna-sekhar-reddy-a77861216/" target="_blank">
+        <img class="socialmedia-logo" src="https://cdn.pixabay.com/photo/2017/08/22/11/56/linked-in-2668696_1280.png" routerLink="/"
+        style="margin-right: 5px;" routerLinkActive="router-link-active" />
+      </a>
+      <a matTooltip="Check my Repos" matTooltipClass="example-tooltip-uppercase" href="https://github.com/gunasekhar02" target="_blank">
+        <img class="socialmedia-logo" src="https://cdn.pixabay.com/photo/2022/01/30/13/33/github-6980894_1280.png" routerLink="/"
+        style="margin-right: 5px;" routerLinkActive="router-link-active" />
+      </a>
+        <a matTooltip="Follow on Twitter" matTooltipClass="example-tooltip-uppercase" href="https://x.com/" target="_blank">
+          <img class="socialmedia-logo" src="https://cdn.pixabay.com/photo/2017/11/10/05/05/twitter-2935414_640.png" alt="Twitter Logo" style="margin-right: 5px;" />
+      </a>
+      
     </mat-toolbar>
-</div>
+  </div>
 
-<div class="table-conatiner">
-  <router-outlet></router-outlet>
-</div>
+  <div class="table-conatiner">
+    <router-outlet></router-outlet>
+  </div>
 
-<div>
-  <footer class="page-footer">
-    <div class="footer-content">
+  <div>
+    <footer class="page-footer">
+      <div class="footer-content">
         <p><mat-icon>copyright</mat-icon> 2024 WorkPathWays. All rights reserved.</p>
-    </div>
-  </footer>
+      </div>
+    </footer>
+  </div>
 </div>
-</div>
-
-
-

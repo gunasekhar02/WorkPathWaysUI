@@ -1,19 +1,25 @@
 
 .card-class{
-    width: 90%;
-    padding-left: 8%;
+    width: 100%;
+    padding-left: 0%;
+    height: 100%;
 }
 .form-group{
     width: 500px;
 }
 .btn-container{
     padding-left: 0%;
+    margin-right: 20%;
 }
 .form-class{
     padding-left: 10%;
+    background-color:#242124;
+    border-radius: 10px;
+    height: 90%;
 }
 .w-full{
-    width: 90%;
-    padding-left: 8%;
+    width: 85%;
+    padding-left: 7%;
     padding-bottom: 5px;
+    color: white;
 }
