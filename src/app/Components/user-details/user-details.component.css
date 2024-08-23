@@ -10,6 +10,7 @@
   border-radius: 10px;
   color: white;
   width: 100%;
+  
   /* Ensure text is visible on a black background */
 }
 
@@ -27,52 +28,53 @@ span {
   color: white;
 }
 
-.header{
-  margin: 5px;
-  font-size: 25px;
+.not-bold{
+  font-size: 15Px;
 }
 
 .card-header{
   background-color: rgb(30, 95, 169);
    color:white;
    border-radius: 20px;
+   height: auto;
+   box-shadow: 5px 5px 8px rgba(103, 102, 102, 0.4); /* Subtle dark shadow */
+   justify-content: space-between;
+   display: flex;
+   align-items: center;
 }
 
 .s1{
-  font-size: 20px;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 20px;
+}
+
+.s2{
+  font-size: 15px;
   font-weight: bold;
   line-height: 30px;
 }
 
-.s2{
-  font-size: 17px;
+.s3{
+  font-size: 12px;
   font-weight: bold;
   line-height: 25px;
-
 }
 
-.s3{
-  font-size: 15px;
-  font-weight: bold;
-  line-height: 20px;
 
-}
-
-.btn-container{
-  padding-left: 0%;
-  margin-right: 0%;
-}
-
-.footer-btn-container{
-  margin-left: 42%;
-}
-
-.fn-btn{
-  margin: 15px;
-  size: 20px;
-}
 
 .del-fn-btn{
   margin-left: 100%;
   color: white;
+} 
+
+.header {
+  margin: 0;
+  font-size: 25px;
+  flex-grow: 1; /* Allow the header to take up available space */
+}
+
+.button-group {
+  display: flex;
+  gap: 30px; /* Adjust the gap between buttons as needed */
 }
