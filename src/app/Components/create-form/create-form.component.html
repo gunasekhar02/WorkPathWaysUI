@@ -2,16 +2,14 @@
     @if(isEdit){
         <div class="card-class">
             <mat-card appearance="raised">
-                <mat-card-content>
+                <mat-card-content style="background-color: #242124; border-radius: 20px;">
                     <div>
-                        <mat-card style="padding-left: 40%;" appearance="raised">
-                            <mat-card-content  style="color: black; font-weight: bold;" >Edit User Form</mat-card-content>
-                          </mat-card>
+                        <h4 style="color: white; margin: 10px;">Update User Form</h4>
                         <div class="form-class" style="padding-top: 5%;">
                             <form [formGroup]="userForm" (ngSubmit)="update()">
         
-                                <div class="w-full flex flex-wrap">
-                                    <mat-form-field class="w-full">
+                                <div class="w-full flex flex-wrap" >
+                                    <mat-form-field class="w-full" >
                                         <mat-label>Enter First Name </mat-label>
                                         <input matInput placeholder="Enter first Name" required formControlName="firstName"/>
                                     </mat-form-field>
@@ -38,8 +36,8 @@
                                     </mat-form-field>
                                 </div>
                                 <div class="btn-container" style="display: flex; justify-content: space-between; align-items: center;">
-                                    <button mat-raised-button color="primary" color="primary" routerLink="/users">Back</button>
-                                    <button mat-raised-button color="primary" [disabled]="!userForm.valid" style="margin: 0 auto;">Update</button>
+                                    <button class="btn" routerLink="/users">Back</button>
+                                    <button class="btn" [disabled]="!userForm.valid" style="margin: 0 auto;">Update</button>
                                 </div>
                             </form>
                         </div>
@@ -51,16 +49,13 @@
         
     }
     @else {
-        <div class="card-class">
+        <div  class="card-class">
             <mat-card appearance="raised">
-                <mat-card-content>
+                <mat-card-content style="background-color: #242124; border-radius: 20px;">
                     <div>
-                        <mat-card style="padding-left: 40%;" appearance="raised">
-                            <mat-card-content style="color: black; font-weight: bold;" >Create User Form</mat-card-content>
-                          </mat-card>
+                        <h4 style="color: white; margin: 10px;">Create User Form</h4>
                         <div class="form-class" style="padding-top: 5%;">
                             <form [formGroup]="userForm" (ngSubmit)="save()">
-        
                                 <div class="w-full flex flex-wrap">
                                     <mat-form-field class="w-full">
                                         <mat-label>Enter First Name </mat-label>
@@ -89,9 +84,10 @@
                                     </mat-form-field>
                                 </div>
                                 <div class="btn-container" style="display: flex; justify-content: space-between; align-items: center;">
-                                    <button mat-raised-button color="primary" color="primary" routerLink="/users">Back</button>
-                                    <button mat-raised-button color="primary" [disabled]="!userForm.valid" style="margin: 0 auto;">Save</button>
+                                    <button class="btn" routerLink="/users">Back</button>
+                                    <button class="btn" [disabled]="!userForm.valid" style="margin: 0 auto;">Save</button>
                                 </div>
+
                             </form>
                         </div>
         

@@ -10,11 +10,12 @@
   }
 .mat-toolbar{
   border-radius: 8px;
+  background-color: black;
 }
 
 .page-footer {
   background-color: 2a2a2a; /* Darker color for contrast */
-  color: white;
+  color: black;
   padding: 0px; /* Adjust padding as needed */
   text-align: center;
   border-radius: 0 0 10px 10px; /* Rounded corners on the bottom */
@@ -28,6 +29,8 @@
   display: block;
   transition: transform 0.3s, opacity 0.3s; /* Smooth transition for transform and opacity */
   cursor: pointer; 
+  background-color: white;
+  border-radius: 21px;
 }
 
 .logo:hover {
@@ -35,3 +38,22 @@
   opacity: 0.8; /* Slightly reduce opacity for a fade effect */
 }
 
+.socialmedia-logo {
+  height: 30px;
+  width: 30px;
+  margin-right: 20px;
+  display: block;
+  transition: transform 0.3s, opacity 0.3s; /* Smooth transition for transform and opacity */
+  cursor: pointer; 
+  background-color: white;
+  border-radius: 21px;
+  margin-top: 10px; /* Top margin */
+  margin-right: 15px; /* Right margin */
+  margin-bottom: 10px; /* Bottom margin */
+  margin-left: 15px; /* Left margin */
+}
+
+.socialmedia-logo:hover {
+  transform: scale(1.1); /* Scale up the logo slightly */
+  opacity: 0.8; /* Slightly reduce opacity for a fade effect */
+}

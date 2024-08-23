@@ -18,12 +18,36 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
     color: white; /* White text */
   }
 
-  .class-main {
-    background-color:  #2a2a2a;
-    border-radius: 10px;
-    padding: 20px;
-    color: white;
-    height: max-content;
+/* 
+.class-main {
+  background-color:  white;
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
+  height: max-content;
+} */
+
+.btn{
+  padding: 10px;
+ padding-left: 20px;
+ padding-right: 20px;
+  border-radius: 25px;
+  cursor: pointer; 
+  color:white ;
+  background-color: rgb(53, 53, 138) ;
+}
+
+
+.class-main {
+  /* background-color: white;  */
+  background-image: url("https://media.istockphoto.com/id/1370544962/photo/white-paper-background-fibrous-cardboard-texture-for-scrapbooking.jpg?s=612x612&w=0&k=20&c=6JMvJuAMLW0FVsB0iiPbKX8I6jBm2h_-ZZdMtrgvxo0="); /* Replace with the actual path to your image */
+  background-size: cover; /* Ensures the image covers the entire area */
+  background-position: center; /* Centers the image */
+  background-repeat: no-repeat; /* Prevents the image from repeating */
+  border-radius: 10px;
+  padding: 20px;
+  color: white;
+  height: max-content;
 }
 
 

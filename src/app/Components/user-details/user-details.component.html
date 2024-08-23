@@ -1,47 +1,101 @@
-<div class="class-main" >
-    <div class="list-data">
-        <h3>Experience</h3>
-        <mat-list class="example-list-wrapping">
-            <mat-list-item class="list-item" lines="3" *ngFor="let item of listUserExperiance">
-              <span matListItemTitle>{{ item.role }}</span>
-              <span matListItemTitle>{{ item.companyName }}</span>
-              <span matListItemTitle>Professional Experience: {{ item.professionalExperience }}</span>
-              <span>{{ item.description }}</span>
-            </mat-list-item>
-          </mat-list>
+<div class="class-main">
+
+  <div class="list-data">
+    <div>
+      <mat-card style="border-radius: 100px;" appearance="raised">
+        <mat-card-content class="card-header">
+          <h3 class="header">Experience</h3>
+        </mat-card-content>
+      </mat-card>
+      <ul class="example-list-wrapping">
+        <li class="list-item" *ngFor="let item of listUserExperiance">
+          <span class="s1">{{ item.role }}</span> <br>
+          <span class="s2">- {{ item.companyName }}</span><br>
+          <span class="s3">- Professional Experience: {{ item.professionalExperience }}</span><br>
+          <span>{{ item.description }}</span>
+          <div>
+            <button class="del-fn-btn" mat-mini-fab color="warn" matTooltip="Delete Experience" (click)="onExpDelete(item.id)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+        </li>
+      </ul>
     </div>
-    
-    <div class="list-data">
-        <h3>Desired Companies</h3>
-    
-        <mat-list class="example-list-wrapping">
-            <mat-list-item class="list-item" lines="3" *ngFor="let item of listUserDesiredCompanies">
-              <span matListItemTitle>Desired Role:  {{ item.desiredRole }}</span>
-              <span matListItemTitle>Desired Company:  {{ item.desiredCompanyName }}</span>
-              <span>{{ item.description }}</span>
-            </mat-list-item>
-          </mat-list>
+
+    <div class="footer-btn-container">
+      <button class="fn-btn" mat-mini-fab color="primary" (click)="onExpAdd()" matTooltip="Add Experience">
+        <mat-icon>add_box</mat-icon>
+      </button>
+      <button class="fn-btn" mat-mini-fab color="primary" (click)="onExpEdit()" matTooltip="Edit Experience">
+        <mat-icon>edit</mat-icon>
+      </button>
     </div>
-    
-    <div class="list-data">
-        <h3>Accomplishments</h3>
-    
-        <mat-list class="example-list-wrapping">
-            <mat-list-item class="list-item" lines="3" *ngFor="let item of listUserAccomplishments">
-              <span matListItemTitle>Awards:  {{ item.awards }}</span>
-              <span matListItemTitle>In the Company:  {{ item.inCompany }}</span>
-              <span matListItemTitle>Awarded for:  {{ item.awardedFor }}</span>
-              <span>{{ item.description }}</span>
-            </mat-list-item>
-          </mat-list>
-        
+  </div>
+
+
+  <div class="list-data">
+    <div>
+      <mat-card style="border-radius: 100px;" appearance="raised">
+        <mat-card-content class="card-header">
+          <h3 class="header">Desired Companies</h3>
+        </mat-card-content>
+      </mat-card>
+      <ul class="example-list-wrapping">
+        <li class="list-item" lines="3" *ngFor="let item of listUserDesiredCompanies">
+          <span class="s2">Desired Role: </span><span class="not-bold">{{ item.desiredRole }}</span> <br>
+          <span class="s2">Desired Company: </span><span class="not-bold">{{ item.desiredCompanyName }}</span><br>
+          <span>{{ item.description }}</span><br>
+          <div>
+            <button class="del-fn-btn" mat-mini-fab color="warn" matTooltip="Delete DesiredCompanies" (click)="onDesiredCompaniesDelete(item.id)">
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+        </li>
+      </ul>
     </div>
-      
+
+
+    <div class="footer-btn-container">
+      <button class="fn-btn" mat-mini-fab color="primary" (click)="onDesiredCompaniesAdd()" matTooltip="Add DesiredCompanies">
+        <mat-icon>add_box</mat-icon>
+      </button>
+      <button class="fn-btn" mat-mini-fab color="primary" (click)="onDesiredCompaniesEdit()" matTooltip="Edit DesiredCompanies">
+        <mat-icon>edit</mat-icon>
+      </button>
+    </div>
+
+  </div>
+
+  <div class="list-data">
+    <div>
+      <mat-card style="border-radius: 100px;" appearance="raised">
+        <mat-card-content class="card-header">
+          <h3 class="header">Accomplishments</h3>
+        </mat-card-content>
+      </mat-card>
+      <ul class="example-list-wrapping">
+        <li class="list-item" lines="4" *ngFor="let item of listUserAccomplishments">
+          <span class="s2">Awards: </span> <span class="not-bold">{{ item.awards }}</span><br>
+          <span class="s2">In the Company: </span><span class="not-bold">{{ item.inCompany }}</span> <br>
+          <span class="s2">Awarded for: </span><span class="not-bold">{{ item.awardedFor }}</span><br>
+          <span>{{ item.description }}</span><br>
+          <div>
+            <button class="del-fn-btn" mat-mini-fab color="warn" matTooltip="Delete Accomplishmensts"(click)="onAccomplishmentDelete(item.id)" >
+              <mat-icon>delete</mat-icon>
+            </button>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="footer-btn-container">
+      <button class="fn-btn" mat-mini-fab color="primary" (click)="onAccomplishmentAdd()"  matTooltip="Add Accomplishments">
+        <mat-icon>add_box</mat-icon>
+      </button>
+      <button class="fn-btn" mat-mini-fab color="primary" (click)="onAccomplishmentEdit()"  matTooltip="Edit Accomplishments">
+        <mat-icon>edit</mat-icon>
+      </button>
+    </div>
+
+  </div>
+
 </div>
-
-
-
-
-
-
-  

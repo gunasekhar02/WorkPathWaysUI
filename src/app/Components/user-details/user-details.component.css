@@ -1,17 +1,78 @@
-
-
 .example-list-wrapping {
-    max-width: 500px;
-  }
+  max-width: 500px;
+}
 
-  .list-data {
-    margin: 80px;
-    background-color: white;
-    padding: 20px;
-    border-radius: 10px;
-    color: black; /* Ensure text is visible on a black background */
-  }
-  
-  .list-item{
-    color: white;
-  }
+
+.list-data {
+  margin: 20px;
+  background-color: #242124;
+  padding: 20px;
+  border-radius: 10px;
+  color: white;
+  width: 100%;
+  /* Ensure text is visible on a black background */
+}
+
+
+.list-item {
+  color: rgb(97, 93, 93);
+  margin: 6%;
+  margin-left: 10%;
+  width: 1100px;
+  border-bottom: 0.1px solid white; 
+  padding-bottom: 5px; 
+}
+
+span {
+  color: white;
+}
+
+.header{
+  margin: 5px;
+  font-size: 25px;
+}
+
+.card-header{
+  background-color: rgb(30, 95, 169);
+   color:white;
+   border-radius: 20px;
+}
+
+.s1{
+  font-size: 20px;
+  font-weight: bold;
+  line-height: 30px;
+}
+
+.s2{
+  font-size: 17px;
+  font-weight: bold;
+  line-height: 25px;
+
+}
+
+.s3{
+  font-size: 15px;
+  font-weight: bold;
+  line-height: 20px;
+
+}
+
+.btn-container{
+  padding-left: 0%;
+  margin-right: 0%;
+}
+
+.footer-btn-container{
+  margin-left: 42%;
+}
+
+.fn-btn{
+  margin: 15px;
+  size: 20px;
+}
+
+.del-fn-btn{
+  margin-left: 100%;
+  color: white;
+}
