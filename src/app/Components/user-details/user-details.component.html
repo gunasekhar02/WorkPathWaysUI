@@ -5,6 +5,15 @@
       <mat-card style="border-radius: 100px;" appearance="raised">
         <mat-card-content class="card-header">
           <h3 class="header">Experience</h3>
+          <div class="button-group">
+            <button class="fn-btn-edit" mat-mini-fab color="primary" (click)="onExpAdd()" matTooltip="Add Experience">
+              <mat-icon>add_box</mat-icon>
+            </button>
+            <button class="fn-btn" mat-mini-fab color="primary" (click)="onExpEdit()" matTooltip="Edit Experience">
+              <mat-icon>edit</mat-icon>
+            </button>
+          </div>
+            
         </mat-card-content>
       </mat-card>
       <ul class="example-list-wrapping">
@@ -21,15 +30,6 @@
         </li>
       </ul>
     </div>
-
-    <div class="footer-btn-container">
-      <button class="fn-btn" mat-mini-fab color="primary" (click)="onExpAdd()" matTooltip="Add Experience">
-        <mat-icon>add_box</mat-icon>
-      </button>
-      <button class="fn-btn" mat-mini-fab color="primary" (click)="onExpEdit()" matTooltip="Edit Experience">
-        <mat-icon>edit</mat-icon>
-      </button>
-    </div>
   </div>
 
 
@@ -38,6 +38,14 @@
       <mat-card style="border-radius: 100px;" appearance="raised">
         <mat-card-content class="card-header">
           <h3 class="header">Desired Companies</h3>
+          <div class="button-group">
+          <button class="fn-btn-edit" mat-mini-fab color="primary" (click)="onDesiredCompaniesAdd()" matTooltip="Add DesiredCompanies">
+            <mat-icon>add_box</mat-icon>
+          </button>
+          <button class="fn-btn" mat-mini-fab color="primary" (click)="onDesiredCompaniesEdit()" matTooltip="Edit DesiredCompanies">
+            <mat-icon>edit</mat-icon>
+          </button>
+          </div>
         </mat-card-content>
       </mat-card>
       <ul class="example-list-wrapping">
@@ -53,17 +61,6 @@
         </li>
       </ul>
     </div>
-
-
-    <div class="footer-btn-container">
-      <button class="fn-btn" mat-mini-fab color="primary" (click)="onDesiredCompaniesAdd()" matTooltip="Add DesiredCompanies">
-        <mat-icon>add_box</mat-icon>
-      </button>
-      <button class="fn-btn" mat-mini-fab color="primary" (click)="onDesiredCompaniesEdit()" matTooltip="Edit DesiredCompanies">
-        <mat-icon>edit</mat-icon>
-      </button>
-    </div>
-
   </div>
 
   <div class="list-data">
@@ -71,6 +68,14 @@
       <mat-card style="border-radius: 100px;" appearance="raised">
         <mat-card-content class="card-header">
           <h3 class="header">Accomplishments</h3>
+          <div class="button-group">
+          <button class="fn-btn-edit" mat-mini-fab color="primary" (click)="onAccomplishmentAdd()"  matTooltip="Add Accomplishments">
+            <mat-icon>add_box</mat-icon>
+          </button>
+          <button class="fn-btn" mat-mini-fab color="primary" (click)="onAccomplishmentEdit()"  matTooltip="Edit Accomplishments">
+            <mat-icon>edit</mat-icon>
+          </button>
+          </div>
         </mat-card-content>
       </mat-card>
       <ul class="example-list-wrapping">
@@ -86,14 +91,6 @@
           </div>
         </li>
       </ul>
-    </div>
-    <div class="footer-btn-container">
-      <button class="fn-btn" mat-mini-fab color="primary" (click)="onAccomplishmentAdd()"  matTooltip="Add Accomplishments">
-        <mat-icon>add_box</mat-icon>
-      </button>
-      <button class="fn-btn" mat-mini-fab color="primary" (click)="onAccomplishmentEdit()"  matTooltip="Edit Accomplishments">
-        <mat-icon>edit</mat-icon>
-      </button>
     </div>
 
   </div>
